@@ -1,6 +1,3 @@
-Отличное замечание! Дополню стили до полной версии, добавив недостающие элементы и улучшив анимации. Вот полный CSS-код с новыми эффектами:
-
-```css
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
@@ -353,3 +350,91 @@ main {
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.1rem;
 }
+
+.owner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-left: 3px solid var(--neon-blue);
+    position: relative;
+}
+
+.owner-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--neon-blue), var(--neon-purple));
+    border-radius: 3px;
+}
+
+.tg-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.tg-contact i {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    animation: glow 1.5s infinite;
+}
+
+.neon-link {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+.neon-link:hover {
+    text-shadow: 0 0 10px var(--neon-blue);
+    color: #fff;
+    background: rgba(0, 243, 255, 0.1);
+}
+
+.neon-link::after {
+    content: '↗';
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.rules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.rule-category {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.8rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--neon-blue);
+    box-shadow: inset 0 0 15px rgba(0, 243, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.rule-category:hover {
+    transform: translateY(-5px);
+    border-left: 4px solid var(--neon-purple);
+    box-shadow: 
+        inset 0 0 20px rgba(0, 243, 255, 0.2),
+        0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rule-category h3 {
+    margin-bottom: 1.2rem;
+    color: var(--neon-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
